@@ -14,7 +14,12 @@ app.get('/req', (req, res) => {
 
 app.get('/meunome', (req,res) =>{
   console.log("You've found my name")
-  res.send('Guilherme Santos Corneto')
+  res.send(' Meu nome é Guilherme Santos Corneto')
+})
+
+app.get('/tico', (req,res) =>{
+  console.log("Squirrel's Gang")
+  res.send('teco')
 })
 
 app.listen(port, () => console.log(`Aplicação rdando na porta ${port}!`));
