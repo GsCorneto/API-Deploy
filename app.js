@@ -22,6 +22,24 @@ app.get('/tico', (req,res) =>{
   res.send('teco')
 })
 
+app.get("/pokemons", (req, res) => {
+  const pokemons = [
+      { id: 1, name: "Pikachu", type: "Elétrico" },
+      { id: 2, name: "Caterpie", type: "Inseto" },
+      { id: 3, name: "Pidgeotto", type: "Normal/Voador" },
+      { id: 4, name: "Bulbassauro", type: "Planta/Venenoso" },
+      { id: 5, name: "Charmander", type: "Fogo" },
+      { id: 6, name: "Squirtle", type: "Água" },
+      { id: 7, name: "Krabby", type: "Água" },
+      { id: 8, name: "Primeape", type: "Lutador" },
+      { id: 9, name: "Muk", type: "Venenoso" },
+      { id: 10, name: "Tauros", type: "Normal" },
+  ];
+  res.json(pokemons); 
+});
+
+app.post("/")
+
 app.listen(port, () => console.log(`Aplicação rdando na porta ${port}!`));
 
 const html = `
