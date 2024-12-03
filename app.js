@@ -38,7 +38,19 @@ app.get("/pokemons", (req, res) => {
   res.json(pokemons); 
 });
 
-app.post("/")
+app.post("/series", (req,res) =>{
+  const {s1, s2, s3} = req.body;
+  if(!nome){
+    return res.status(400).json({ error:"Insira alguma série por favr"});
+    }
+    res.status(201).json({
+      message: "Series bacana hein",
+      serie1: {s1},
+      serie2: {s2},
+      serie3: {s3},
+    })
+  }
+)
 
 app.listen(port, () => console.log(`Aplicação rdando na porta ${port}!`));
 
